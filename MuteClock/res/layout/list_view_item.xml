@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="75dp"
+    android:background="#CCAAAAAA" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <CheckBox
+            android:id="@+id/toDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/btn_check" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/RelativeLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/RelativeLayout2" >
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/vibrate" >
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textRuleDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/monday"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/textRuleTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textRuleDays"
+            android:layout_toRightOf="@+id/frameLayout1"
+            android:gravity="center"
+            android:text="@string/mute_at"
+            android:textColor="@color/black"
+            android:textSize="28sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
