@@ -2,13 +2,11 @@ package com.rextuz.muteclock;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -28,20 +26,9 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		// Commercials
-		LinearLayout mainLayout = (LinearLayout) findViewById(R.id.mainLayout);
 		AdView adView = (AdView) this.findViewById(R.id.adView);
 		AdRequest adRequest = new AdRequest.Builder().build();
 		adView.loadAd(adRequest);
-
-		// Background
-		int orientation = getResources().getConfiguration().orientation;
-		if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-			mainLayout.setBackgroundResource(R.drawable.background_land);
-		} else {
-			mainLayout.setBackgroundResource(R.drawable.background_port);
-		}
-
 		ruleManager = new RuleManager(getApplicationContext());
 		adapter = new RulesBaseAdapter(getApplicationContext(),
 				ruleManager.rules);

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -28,7 +27,6 @@ public class AddActivity extends Activity {
 	private EditText editTextUnmute;
 	private CheckBox vibrateBox, repeatBox;
 	private ArrayList<CheckBox> dayBoxes;
-	private LinearLayout addLayout;
 	private TextView hideShow;
 	private DatePicker datePicker;
 
@@ -36,15 +34,6 @@ public class AddActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add_rule);
-
-		// Background
-		addLayout = (LinearLayout) findViewById(R.id.addLayout);
-		int orientation = getResources().getConfiguration().orientation;
-		if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-			addLayout.setBackgroundResource(R.drawable.background_land);
-		} else {
-			addLayout.setBackgroundResource(R.drawable.background_port);
-		}
 
 		getWindow().setSoftInputMode(
 				WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
