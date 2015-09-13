@@ -1,7 +1,5 @@
 package com.rextuz.muteclock;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +18,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class AddActivity extends Activity {
 
@@ -143,7 +143,7 @@ public class AddActivity extends Activity {
 				muteTime -= timeToday;
 				muteTime += TimeConverter.datePickerToMillis(datePicker);
 			}
-			if (muteTime > System.currentTimeMillis()) {
+			if (muteTime > System.currentTimeMillis() || !repeatBox.isChecked()) {
 				Rule newRule = new Rule(getApplicationContext(), muteTime,
 						unmuteTime, days, vibrate, requestCode);
 				if (MainActivity.ruleManager.addRule(newRule))

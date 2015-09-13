@@ -1,11 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rextuz.muteclock"
-    android:versionCode="3"
-    android:versionName="1.1.1" >
+    android:versionCode="5"
+    android:versionName="1.1.3">
 
     <uses-sdk
         android:minSdkVersion="9"
-        android:targetSdkVersion="21" />
+        android:targetSdkVersion="23" />
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -47,10 +47,6 @@
             </intent-filter>
         </receiver>
 
-        <activity
-            android:name="com.rextuz.muteclock.SettingsActivity"
-            android:label="@string/title_activity_settings" >
-        </activity>
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
