@@ -8,6 +8,11 @@ android {
         applicationId "com.rextuz.muteclock"
         minSdkVersion 14
         targetSdkVersion 24
+        multiDexEnabled true
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
     }
 
     buildTypes {
