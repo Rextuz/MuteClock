@@ -13,6 +13,7 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ import com.rextuz.muteclock.rules.Rule;
 import com.rextuz.muteclock.static_classes.TimeConverter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AddActivity extends AppCompatActivity {
 
@@ -47,21 +49,33 @@ public class AddActivity extends AppCompatActivity {
         datePicker = (DatePicker) findViewById(R.id.datePicker);
         datePicker.setVisibility(View.GONE);
 
+        // Managing check box labels
+        final List<TextView> labels = new ArrayList<>();
+        labels.add((TextView) findViewById(R.id.textViewMonday));
+        labels.add((TextView) findViewById(R.id.textViewTuesday));
+        labels.add((TextView) findViewById(R.id.textViewWednesday));
+        labels.add((TextView) findViewById(R.id.textViewThursday));
+        labels.add((TextView) findViewById(R.id.textViewFriday));
+        labels.add((TextView) findViewById(R.id.textViewSaturday));
+        labels.add((TextView) findViewById(R.id.textViewSunday));
+
         repeatBox = (CheckBox) findViewById(R.id.repeatBox);
         repeatBox.setChecked(true);
         repeatBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-
             @Override
-            public void onCheckedChanged(CompoundButton buttonView,
-                                         boolean isChecked) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     datePicker.setVisibility(View.GONE);
                     for (CheckBox box : dayBoxes)
                         box.setVisibility(View.VISIBLE);
+                    for (TextView label : labels)
+                        label.setVisibility(View.VISIBLE);
                 } else {
                     datePicker.setVisibility(View.VISIBLE);
                     for (CheckBox box : dayBoxes)
                         box.setVisibility(View.GONE);
+                    for (TextView label : labels)
+                        label.setVisibility(View.GONE);
                 }
             }
         });

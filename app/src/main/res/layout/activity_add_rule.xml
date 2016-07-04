@@ -141,7 +141,7 @@
                         android:layout_height="wrap_content" />
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/textViewMonday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -161,6 +161,7 @@
                         android:layout_height="wrap_content" />
 
                     <TextView
+                        android:id="@+id/textViewTuesday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -180,6 +181,7 @@
                         android:layout_height="wrap_content" />
 
                     <TextView
+                        android:id="@+id/textViewWednesday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -199,6 +201,7 @@
                         android:layout_height="wrap_content" />
 
                     <TextView
+                        android:id="@+id/textViewThursday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -218,6 +221,7 @@
                         android:layout_height="wrap_content" />
 
                     <TextView
+                        android:id="@+id/textViewFriday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -237,6 +241,7 @@
                         android:layout_height="wrap_content" />
 
                     <TextView
+                        android:id="@+id/textViewSaturday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -256,6 +261,7 @@
                         android:layout_height="wrap_content" />
 
                     <TextView
+                        android:id="@+id/textViewSunday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
